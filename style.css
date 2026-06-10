@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+:root {
+	--almond-silk: #ffddd2;
+	--tangerine-dream: #e29578;
+	--stormy-teal: #006d77;
+	--pearl-aqua: #83c5be;
+	--alice-blue: #edf6f9;
+	--print-color: #7c2f13;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--almond-silk);
+}
+
+#stage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 32px 16px 40px;
+}
+
+#polaroid {
+	position: relative;
+	width: 100%;
+	max-width: 536px;
+	border-radius: 2px;
+	border: 18px solid var(--alice-blue);
+	border-bottom-width: 82px;
+	overflow: hidden;
+	cursor: crosshair;
+	user-select: none;
+	filter: drop-shadow(0 0 0.25rem var(--tangerine-dream));
+}
+
+canvas {
+	display: block;
+	width: 100%;
+	background: var(--pearl-aqua);
+}
+
+#hint {
+	position: absolute;
+	bottom: -90px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: "Shadows Into Light", cursive;
+	font-size: 1.2rem;
+	color: var(--print-color);
+	pointer-events: none;
+	white-space: nowrap;
+	transition: opacity 1.2s;
+	font-style: italic;
+}
